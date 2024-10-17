@@ -1,0 +1,15 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    long a, b, c, d;
+    cin >> a >> b >> c >> d;
+
+    for (long i = a; i <= b; ++i) {
+        if (i % d == c) {
+            cout << i << " ";
+        }
+    }
+
+    return 0;
+}
