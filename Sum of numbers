@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    long N; 
+    cin >> N;
+
+    long sum = 0; 
+
+ 
+    for (long i = 0; i < N; ++i) {
+        long number;
+        cin >> number; 
+        sum += number; 
+    }
+
+    cout << sum << endl;
+
+    return 0;
+}
