@@ -1,0 +1,30 @@
+#include <iostream>
+#include <vector>
+using namespace std; 
+int main() {
+    int n;
+    cin >> n;
+
+    vector<int> prices = {15, 70, 125, 230, 440};
+    vector<int> trips = {1, 5, 10, 20, 60};
+    vector<int> counts(5, 0); // Количество билетов каждого типа
+
+    // Начинаем с самого большого билета
+    for (int i = 4; i >= 0; --i) {
+        while (n >= trips[i]) {
+            counts[i]++;
+            n -= trips[i];
+        }
+    }
+
+    // Если остались поездки, их нужно покрыть билетами на 1 поездку
+    counts[0] += n;
+
+    // Выводим результат
+    for (int i = 0; i < 5; ++i) {
+          cout << counts[i] << " ";
+    }
+   cout << endl;
+
+    return 0;
+}
